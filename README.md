@@ -4,15 +4,17 @@ High-throughput IoT/OT sensor data generator simulating pipeline infrastructure 
 
 ## Install
 
+Installs both `sensor-gen` and `expanso-edge` (debug build):
+
 ```bash
 curl -fsSL https://raw.githubusercontent.com/aronchick/sensor-gen/main/install.sh | sh
 ```
 
-Or specify a version / install directory:
+Install to a custom directory (no sudo needed):
 
 ```bash
-VERSION=v0.1.0 INSTALL_DIR=~/.local/bin \
-  curl -fsSL https://raw.githubusercontent.com/aronchick/sensor-gen/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/aronchick/sensor-gen/main/install.sh \
+  | INSTALL_DIR=~/.local/bin sh
 ```
 
 ## Usage
