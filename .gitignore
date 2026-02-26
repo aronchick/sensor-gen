@@ -1,0 +1,8 @@
+sensor-gen
+sensor-gen-*
+*.jsonl
+output.json
+output/
+.DS_Store
+.env
+.envrc
