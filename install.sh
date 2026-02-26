@@ -4,7 +4,7 @@
 set -e
 
 SENSOR_REPO="aronchick/sensor-gen"
-EDGE_REPO="aronchick/expanso-edge-debug"
+EDGE_REPO="aronchick/expanso-edge-debug-public"
 INSTALL_DIR="${INSTALL_DIR:-/usr/local/bin}"
 
 # Detect OS
@@ -24,10 +24,11 @@ case "$ARCH" in
 esac
 
 # Helper: get latest release tag from a repo
+# Uses /releases (not /releases/latest) to include prereleases
 get_latest_tag() {
   curl -fsSL \
-    "https://api.github.com/repos/$1/releases/latest" \
-    | grep '"tag_name"' | cut -d'"' -f4
+    "https://api.github.com/repos/$1/releases?per_page=1" \
+    | grep '"tag_name"' | head -1 | cut -d'"' -f4
 }
 
 # Helper: download and install a binary
