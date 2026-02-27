@@ -4,7 +4,7 @@
 set -e
 
 SENSOR_REPO="aronchick/sensor-gen"
-EDGE_REPO="aronchick/expanso-edge-debug-public"
+EDGE_REPO="aronchick/expanso-edge-releases"
 INSTALL_DIR="${INSTALL_DIR:-/usr/local/bin}"
 
 # Detect OS
